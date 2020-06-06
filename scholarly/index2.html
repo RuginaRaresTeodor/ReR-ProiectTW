@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">Community Draft</div>
+      </div>
+      <h1>Scholarly HTML</h1>
+    </header>
+
+    <div role="contentinfo">
+      <dl>
+        <dt>Autori</dt>
+        <dd>
+         Roman Marius
+          </dd>
+          <dd>
+         Rugina Rares
+        </dd>
+      </dl>
+    </div>
+
+    <section id="ghid">
+            <!-- review? -->
+            <h2>Sistem management</h2>
+
+            <section id="Register">
+              <!-- review? -->
+              <h3>Register.php</h3>
+              <p>
+                Printr-o metoda POST, catre server se vor trimite trei parametri care vor fi transmisi catre baza de date in vederea apelarii unei proceduri.
+                Daca email-ul exista deja in baza de date sau nu are o structura normala(@gmail.com,@yahoo.com), utilizatorul va fi informat despre asta, astfel incat
+                inregistrarea esueaza.
+              </p>
+            </section>
+            <section id="Register-Login">
+              <!-- review? -->
+              <h3>Login.php</h3>
+              <p>
+                Printr-un POST, catre server se vor trimite doi parametri, email si parola, cu care vom apela o interogare in baza de date sa vedem daca utilizatorul exista.
+                In caz afirmativ, serverul va stoca intr-o sesiune id-ul utilizatorului si in alta sesiune o variabila "logged" care ne va ajuta in celelalte pagini sa dovedim ca
+                utilizatorul s-a logat.
+              </p>
+
+            </section>
+            <section id="main">
+              <!-- review? -->
+              <h3>index.php</h3>
+              <p>
+                In cadrul paginii principale, vom verifica daca variabila logged este setata, se vor apela in baza de date o serie de interogari in vederea existentei de link-uri RSS salvate.
+                In caz afirmativ, pentru fiecare link salvat in baza de date a utilizatorului, vom extrage informatiile necesare pentru afisarea articolelor(titlu,fotografie,link,descriere,data postare) cu XPATH.
+                Daca articolul nu are fotografie sau are un format de tipul .mp4, vom seta noi o fotografie "default".
+                Meniul este de tip slidebar apelat cu ajutorul functiilor javascript (openNav si closeNav).
+                In vederea acordarii unei experiente mai bune a utilizatorului, se gaseste un meniu de tip dropdown, unde vor fi afisate doar numele de baza al site-urilor de unde
+                utilizatorul isi ia feed-urile, prin extragerea substringului dintre primele "https://" si urmatoarea "/".
+              </p>
+              <section id="addBookmarks">
+              <h3>addbookmarks.php</h3>
+              <p>
+                Prin apasarea butonul Bookmark specific fiecarui articol prezentat in index.php, vom trimite catre server link,-ul,titlul si descrierea articolului respectiv, astfel incat
+                dupa apelarea unei interogari in baza de date, sa fie salvata.
+              </p>
+            </section>
+          </section>
+            <section id="menu">
+              <!-- review? -->
+              <h3>Meniu</h3>
+              <section id="Bookmarks">
+              <h3>Bookmarks.php</h3>
+              <p>
+                Cu ajutorul ID-ului salvat in sesiunea de logare, se a apela o interogare in care vor primi id-ul,link-ul,titlul si descriere articolelor pe care le are salvate in baza de date.
+              </p>
+              <section id="deleteBookmarks">
+              <h3>deletebookmarks.php</h3>
+              <p>
+                Prin apasarea butonul de delete in cadrul bookmarks.php, utilizatorul va trimite catre server id-ul link-ului pe care vrea sa-l stearga din Bookmarks. Se va apela o interogare care va sterge din baza de date
+                linia care contine ID-ul utilizatorului salvat in sesiunea de logare si ID-ul articolului transmis.
+              </p>
+            </section>
+            </section>
+            <section id="Add-Content">
+              <h3>addcontent.php si deletefeeds.php</h3>
+              <p>
+                In cadrul addcontent.php, vom interoga baza de date in vederea existentei de link-uri pe care utilizatorul le urmareste. Daca exista, le vom afisa. In dreptul fiecarui link va exista un buton
+                prin a carui apasare va duce la stergerea din baza de date a link-ului respectiv. Va exista un formular unde se poate introduce un link in vederea salvarii lui in baza de date a utilizatoruluo.
+                Daca link-ul nu are formatul XML, acesta nu va fi salvat iar utilizatorul va fi avertizat. In caz contrar, link-ul va fi salvat.
+              </p>
+            </section>
+            <section id="Follows">
+              <h3>Butonul Follows si getfeeds.php</h3>
+              <p>
+              In submeniul butonului follow, vom afisa toate link-urile pe care utilizatorul le-a salvat in baza de date, astfel incat prin apasarea oricarui dintre link-uri,
+              vom trimite  catre server respectivul link de unde se vor extrage toate articolele prin aceeasi metoda ca la index.php (XPATH).
+              </p>
+            </section>
+            <section id="disconnect">
+              <h3>Disconnect.php</h3>
+              <p>
+                Prin apasarea butonului Disconnect, se va distruge sesiunea curent, astfel incat utilizatorul va fi nevoit sa se logheze iar.
+              </p>
+            </section>
+        </section>
+      </section>
+
+  </body>
+</html>

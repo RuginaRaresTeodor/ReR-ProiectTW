@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">Community Draft</div>
+      </div>
+      <h1>Scholarly HTML</h1>
+    </header>
+
+    <div role="contentinfo">
+      <dl>
+        <dt>Autori</dt>
+        <dd>
+         Roman Marius
+         </dd>
+          <dd>
+         Rugina Rares
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Abstract</h2>
+      <p>
+      Avand la dispozitie o suita de situri Web oferind stiri (de exemplu, ziare electronice sau situri precum Hacker News ori Reddit), ReR este oaplicatie Web care centralizeaza
+      articolele aparute zilnic, prezentandu-le intr-o forma atractiva pentru utilizator.
+      </p>
+    </section>
+
+    <section id="Ghid">
+            <!-- review? -->
+            <h2>Ghid de utilizare</h2>
+
+            <section id="Register-Login">
+              <!-- review? -->
+              <h3>Register & Login</h3>
+              <p>
+                Daca deja nu are un cont, aplicatia ii permite utilizatorului sa isi creeze un cont de utilizator format
+                dintr-un email,parola si un nume care vor fi salvate intr-o baza de date,dupa care va fi redirectionat spre
+                pagina de Login unde va introduce datele spre a fi verificate daca sunt valide.
+              </p>
+
+            </section>
+            <section id="main">
+              <!-- review? -->
+              <h3>Pagina principala</h3>
+              <p>
+                Odata ce utilizatorul s-a logat, pe pagina principala va putea sa vizualizeze articolele din fluxul RSS a site-urilor
+                pe care le urmareste(daca urmareste). Ca si utilizator nou, pagina nu va contine articole pana nu vor fi adaugate link-uri
+                valide din care aplicatia sa poata citi. Articolele sunt prezentate intr-o forma atractiva, continand o imagine de fundal,
+                titlul articolui, o descriere pe scurt, ora la care a fost postat, categoria si doua butoane: READ si Bookmark. Prin apasarea
+                butonului READ, utilizatorul va fi redirectionat spre pagina de provenienta a articolului. Prin apasarea butonului Bookmark,
+                utilizatorul va salva acel articol spre a putea fi vizionat mai tarziu.In coltul din stanga sus,utilizatorul dispune de un buton
+                de reimprospatare a paginii si un buton ce ii va pune la dispozitie un meniu.
+              </p>
+            </section>
+            <section id="menu">
+              <!-- review? -->
+              <h3>Meniu</h3>
+              <section id="Home">
+                <!-- review? -->
+                <h3>Home</h3>
+                <p>
+                  Prin apasarea butonului Home, utilizatorul va fi redirectionat spre <a href="#main">Pagina principala</a>.
+                </p>
+              </section>
+              <section id="Bookmarks">
+              <h3>Bookmarks</h3>
+              <p>
+                Prin apasarea butonului Bookmarks, aplicatia ii va afisa in acelasi format specificat la <a href="#main">Pagina principala</a>
+                tuturor articolelor pe care acesta le-a salvat. Utilizatorul va avea la dispozitie posibilitatea de citire a documentului(READ),
+                dar si de stergere a articolului din Bookmarks (Delete).
+              </p>
+            </section>
+            <section id="Add-Content">
+              <h3>Add content</h3>
+              <p>
+                Prin apasarea butonului Add content, utilizatorului i se va prezenta o lista cu link-urile RSS pe care acesta le urmareste, avand posibilitatea
+                de adauga altele noi dar si de a sterge unul deja existent.
+              </p>
+            </section>
+            <section id="Follows">
+              <h3>Follows</h3>
+              <p>
+                Prin apasarea butonului Follows, utilizatorului i se va deschide un submeniu in care ii sunt afisate toate site-urile pe care acesta la urmareste,
+                avand posibilitatea sa vizualizeze doar articolele prezente pe acel site, in acelasi format specificat la <a href="#main">Pagina principala</a>.
+              </p>
+            </section>
+            <section id="disconnect">
+              <h3>Disconnect</h3>
+              <p>
+                Prin apasarea butonului Disconnect, utilizatorul se va deconecta de pe aplicatie, urmand a fi redirectionat spre pagina de login, fara a mai avea
+                posibilitatea de a face orice alta actiune pana cand nu se reconecteaza.
+              </p>
+            </section>
+        </section>
+      </section>
+
+  </body>
+</html>
