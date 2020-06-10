@@ -293,7 +293,7 @@ form {
     position: absolute;
     margin-top:10vh;
     display: none;
-    background-color: #011627;
+    background-color: #5E60CE;
     box-sizing: border-box;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
@@ -621,4 +621,37 @@ form {
 		box-shadow: none;
 	}
 
+}
+
+
+
+.register-page {
+  width:100%;
+  height: 90vh;
+  position: absolute;
+  margin-top:10vh;
+  overflow: hidden;
+  /* display block pentru lucru -modifica dupa in none*/
+  display: none;
+
+  background-color: #FFFBFA;
+}
+.register-page #wrapper {
+    transform: rotateX(0deg);
+    top: 10%;
+    align-items: left;
+    width:100%;
+    border-right-style: solid;
+    border-right-color: #000;
+    border-left-style: solid;
+    border-left-color: #000;
+} 
+.selector {
+  width:100%;
+  height: 90vh;
+  position: absolute;
+  margin-top:10vh;
+  overflow: hidden;
+  display: none;
+  background-color: #FFFBFA;
 }

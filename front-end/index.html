@@ -1,192 +1,284 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Recon</title>
-        <meta name="description" content="We recon for you!">
-        <meta name="author" content="Rares Rugina & Marius Roman">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="profile.png" />
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-	    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script src="fun.js"></script>
-    </head>
-    <body>
-        <div class="nav">
-            <img src="logo.svg" alt="logo">
-            <div class="nav-button" id="acc" onclick="changepage1()">account</div>
-            <div class="nav-button" >buton</div>
-            <div class="nav-button" onclick="changepage2()">Home</div>
-        </div>
-        <div class="first-page">
-            <div class="left">
-                <h1>What is Recon?</h1>
-                <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recon helps you find things you like easier. <br>Just select sites you want your info to come from.</h3>
-            </div>
-            <div class="right">
-                <div id="wrapper">
-                    <div class="form-container">
-                        <span class="form-heading">Login</span>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" placeholder="Email or username..." required>
-                                <span class="bar"></span>
-                            </div>
-            
-                            <div class="input-group">
-                                <input type="password" placeholder="Password..." required>
-                                <span class="bar"></span>
-                            </div>
-                            <br>
-                            <a href="#" style="text-decoration:none; font-size: 1.2rem;" >forgot password?</a>
-                            <div class="input-group">
-                                <button>
-                                    <span style=>Login &nbsp;</span><i class="fas fa-sign-in-alt"></i>
-                                </button>
-                            </div>
-                        </form>
-                        <div class="social-login">
 
-                                <span>Or sign up with:</span>
-                                <div class="social-icons">
-                                    <button>
-                                        <i class="fab fa-facebook-f"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fab fa-google"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fab fa-twitter"></i>
-                                    </button>
-                                </div>
-                                
-                                <div class="switch-login">
-                                    <a href="#">Do not have an account? <span>Register</span></a>
-                                </div>
-                            </div>  
-                    </div>
-                </div>
+<head>
+  <title>Recon</title>
+  <meta name="description" content="We recon for you!">
+  <meta name="author" content="Rares Rugina & Marius Roman">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="profile.png" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="fun.js"></script>
+</head>
+
+<body>
+  <div class="nav">
+    <img src="logo.svg" alt="logo">
+    <div class="nav-button" id="acc" onclick="changepage1()">feed</div>
+    <div class="nav-button" onclick="changepage3()">account</div>
+    <div class="nav-button" onclick="changepage2()">Home</div>
+  </div>
+  <div class="first-page">
+    <div class="left">
+      <h1>What is Recon?</h1>
+      <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recon helps you find things you like easier. <br>Just select sites you
+        want your info to come from.</h3>
+    </div>
+    <div class="right">
+      <div id="wrapper">
+        <div class="form-container">
+          <span class="form-heading">Login</span>
+          <form action="">
+            <div class="input-group">
+              <input type="text" placeholder="Email or username..." name="email" id="email" required>
+              <span class="bar"></span>
             </div>
+
+            <div class="input-group">
+              <input type="password" placeholder="Password..." name="psw" id="psw" required>
+              <span class="bar"></span>
+            </div>
+            <br>
+            <a href="#" style="text-decoration:none; font-size: 1.2rem;">Forgot password?</a>
+            <div class="input-group">
+              <button type="submit">
+                <span style>Login &nbsp;</span><i class="fas fa-sign-in-alt"></i>
+              </button>
+            </div>
+          </form>
+          <div class="social-login">
+
+            <span>Or sign up with:</span>
+            <div class="social-icons">
+              <button>
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button>
+                <i class="fab fa-google"></i>
+              </button>
+              <button>
+                <i class="fab fa-twitter"></i>
+              </button>
+            </div>
+
+            <div class="switch-login">
+              <a href="#">Do not have an account? <span onclick="changepageregister()">Register</span></a>
+            </div>
+          </div>
         </div>
-        <div class="second-page">
-            <div class="dw">
-                <div class="dw-pnl dw-pnl--fcs">
-                  <div class="dw-pnl__cntnt bd--white tx--white">
-                    <h1>Pure CSS masonry layout</h1>
-                  </div>
-                </div>
-                <div class="dw-pnl">
-                  <div class="dw-pnl__cntnt bd--white tx--white">
-                    <ul>
-                      <li>Configurable</li>
-                      <li>Responsive</li>
-                      <li>Supports clusters</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="dw-pnl "><img src="https://unsplash.it/419/?random" class="dw-pnl__cntnt"/>
-                </div>
-                <div class="dw-pnl ">
-                  <div class="dw-pnl__cntnt tx--white bd--white">
-                    <p>Phasellus malesuada, urna non auctor viverra, libero ex pellentesque urna, id rhoncus eros lacus tristique risus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                  </div>
-                </div>
-                <div class="dw-pnl ">
-                  <img src="https://unsplash.it/445/?random" class="dw-pnl__cntnt"/>
-                </div>
-                <div class="dw-pnl ">
-                  <img src="https://unsplash.it/423/?random" class="dw-pnl__cntnt"/>
-                </div>
-                <div class="dw-pnl dw-clstr dw-clstr--hrz">
-                  <div class="dw-clstr__sgmnt dw-clstr__sgmnt--rw ">
-                    <div class="dw-pnl dw-clstr__sgmnt ">
-                      <div class="dw-pnl__cntnt bd--white tx--white">
-                        <h2>How</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="dw-clstr__sgmnt dw-clstr__sgmnt--rw ">
-                    <div class="dw-pnl dw-clstr__sgmnt ">
-                      <div class="dw-pnl__cntnt bd--white tx--white">
-                        <h2>about</h2>
-                      </div>
-                    </div>
-                    <div class="dw-pnl dw-clstr__sgmnt ">
-                      <div class="dw-pnl__cntnt bd--white tx--white">
-                        <h2>clusters?</h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="dw-pnl ">
-                  <img src="https://unsplash.it/420/?random" class="dw-pnl__cntnt"/>
-                </div>
-                <div style="height: 200px;" class="dw-pnl dw-flp">
-                  <div class="dw-pnl__cntnt dw-flp__cntnt">
-                    <div class="dw-flp__pnl dw-flp__pnl--frnt tx--white bd--white tx--center">
-                      <h1>You can flip me round</h1>
-                    </div>
-                    <div class="dw-flp__pnl dw-flp__pnl--bck bd--white tx--white tx--center">
-                      <h1>Yeah that's right</h1>
-                    </div>
-                  </div>
-                </div>
-                <div class="dw-pnl dw-clstr dw-clstr--vrt">
-                  <div class="dw-clstr__sgmnt dw-clstr__sgmnt--clmn ">
-                    <div class="dw-pnl dw-clstr__sgmnt ">
-                      <div class="dw-pnl__cntnt bd--white tx--white">
-                        <h2>A</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="dw-clstr__sgmnt dw-clstr__sgmnt--clmn ">
-                    <div class="dw-pnl dw-clstr__sgmnt ">
-                      <div class="dw-pnl__cntnt bd--white tx--white">
-                        <h2>vertically</h2>
-                      </div>
-                    </div>
-                    <div class="dw-pnl dw-clstr__sgmnt ">
-                      <div class="dw-pnl__cntnt bd--white tx--white">
-                        <h2>flowed</h2>
-                      </div>
-                    </div>
-                    <div class="dw-pnl dw-clstr__sgmnt ">
-                      <div class="dw-pnl__cntnt bd--white tx--white">
-                        <h2>cluster</h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="dw-pnl "><img src="https://unsplash.it/424/?random" class="dw-pnl__cntnt"/>
-                </div>
-                <div class="dw-pnl ">
-                  <div class="dw-pnl__cntnt bd--white bg--darkred tx--white">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu justo ex. Praesent mollis augue sagittis eros pharetra feugiat. Phasellus dignissim est lacus. Sed nec imperdiet dolor, sit amet mattis ex. Sed sed augue eu neque tristique commodo. Mauris aliquet tortor sollicitudin nibh molestie, id egestas nisl sollicitudin. Aliquam erat volutpat. Donec quis ultrices ligula. Cras sed purus risus. Curabitur quis eros eu tortor semper eleifend. Pellentesque lorem elit, dignissim interdum massa id, malesuada rutrum ligula. Suspendisse tempor quis mauris eu facilisis. Phasellus non volutpat diam, non dapibus ligula. Ut non molestie ex, nec sagittis mi. Curabitur suscipit tellus id dolor pretium blandit. Cras tristique tristique pharetra.</p>
-                  </div>
-                </div>
-                <div class="dw-pnl "><img src="https://unsplash.it/425/?random" class="dw-pnl__cntnt"/>
-                </div>
-                <div class="dw-pnl dw-pnl--fcs">
-                  <div class="dw-pnl__cntnt tx--white bd--white tx--center">
-                    <h1>Focus on hover</h1>
-                  </div>
-                </div>
-                <div class="dw-pnl ">
-                  <div class="dw-pnl__cntnt tx--white bd--white">
-                    <h2>Title for some content</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu justo ex. Praesent mollis augue sagittis eros pharetra feugiat. Phasellus dignissim est lacus. Sed nec imperdiet dolor, sit amet mattis ex. Sed sed augue eu neque tristique commodo. Mauris aliquet tortor sollicitudin nibh molestie, id egestas nisl sollicitudin. Aliquam erat volutpat. Donec quis ultrices ligula. Cras sed purus risus. Curabitur quis eros eu tortor semper eleifend.</p>
-                  </div>
-                </div>
-                <div class="dw-pnl dw-pnl--pls">
-                  <div class="dw-pnl__cntnt tx--white bd--white bg--darkred tx--center">
-                    <h1>Pulse on hover</h1>
-                  </div>
-                </div>
-                <div class="dw-pnl "><img src="https://unsplash.it/440/?random" class="dw-pnl__cntnt"/>
-                </div>
-                <div class="dw__fcs-crtn"></div>
-              </div>
+      </div>
+    </div>
+  </div>
+  <div class="second-page">
+    <div class="dw">
+      <div class="dw-pnl dw-pnl--fcs">
+        <div class="dw-pnl__cntnt bd--white tx--white">
+          <h1>Pure CSS masonry layout</h1>
         </div>
-    </body>
+      </div>
+      <div class="dw-pnl">
+        <div class="dw-pnl__cntnt bd--white tx--white">
+          <ul>
+            <li>Configurable</li>
+            <li>Responsive</li>
+            <li>Supports clusters</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dw-pnl "><img src="https://unsplash.it/419/?random" class="dw-pnl__cntnt" />
+      </div>
+      <div class="dw-pnl ">
+        <div class="dw-pnl__cntnt tx--white bd--white">
+          <p>Phasellus malesuada, urna non auctor viverra, libero ex pellentesque urna, id rhoncus eros lacus tristique
+            risus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        </div>
+      </div>
+      <div class="dw-pnl ">
+        <img src="https://unsplash.it/445/?random" class="dw-pnl__cntnt" />
+      </div>
+      <div class="dw-pnl ">
+        <img src="https://unsplash.it/423/?random" class="dw-pnl__cntnt" />
+      </div>
+      <div class="dw-pnl dw-clstr dw-clstr--hrz">
+        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--rw ">
+          <div class="dw-pnl dw-clstr__sgmnt ">
+            <div class="dw-pnl__cntnt bd--white tx--white">
+              <h2>How</h2>
+            </div>
+          </div>
+        </div>
+        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--rw ">
+          <div class="dw-pnl dw-clstr__sgmnt ">
+            <div class="dw-pnl__cntnt bd--white tx--white">
+              <h2>about</h2>
+            </div>
+          </div>
+          <div class="dw-pnl dw-clstr__sgmnt ">
+            <div class="dw-pnl__cntnt bd--white tx--white">
+              <h2>clusters?</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dw-pnl ">
+        <img src="https://unsplash.it/420/?random" class="dw-pnl__cntnt" />
+      </div>
+      <div style="height: 200px;" class="dw-pnl dw-flp">
+        <div class="dw-pnl__cntnt dw-flp__cntnt">
+          <div class="dw-flp__pnl dw-flp__pnl--frnt tx--white bd--white tx--center">
+            <h1>You can flip me round</h1>
+          </div>
+          <div class="dw-flp__pnl dw-flp__pnl--bck bd--white tx--white tx--center">
+            <h1>Yeah that's right</h1>
+          </div>
+        </div>
+      </div>
+      <div class="dw-pnl dw-clstr dw-clstr--vrt">
+        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--clmn ">
+          <div class="dw-pnl dw-clstr__sgmnt ">
+            <div class="dw-pnl__cntnt bd--white tx--white">
+              <h2>A</h2>
+            </div>
+          </div>
+        </div>
+        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--clmn ">
+          <div class="dw-pnl dw-clstr__sgmnt ">
+            <div class="dw-pnl__cntnt bd--white tx--white">
+              <h2>vertically</h2>
+            </div>
+          </div>
+          <div class="dw-pnl dw-clstr__sgmnt ">
+            <div class="dw-pnl__cntnt bd--white tx--white">
+              <h2>flowed</h2>
+            </div>
+          </div>
+          <div class="dw-pnl dw-clstr__sgmnt ">
+            <div class="dw-pnl__cntnt bd--white tx--white">
+              <h2>cluster</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dw-pnl "><img src="https://unsplash.it/424/?random" class="dw-pnl__cntnt" />
+      </div>
+      <div class="dw-pnl ">
+        <div class="dw-pnl__cntnt bd--white bg--darkred tx--white">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu justo ex. Praesent mollis augue sagittis
+            eros pharetra feugiat. Phasellus dignissim est lacus. Sed nec imperdiet dolor, sit amet mattis ex. Sed sed
+            augue eu neque tristique commodo. Mauris aliquet tortor sollicitudin nibh molestie, id egestas nisl
+            sollicitudin. Aliquam erat volutpat. Donec quis ultrices ligula. Cras sed purus risus. Curabitur quis eros
+            eu tortor semper eleifend. Pellentesque lorem elit, dignissim interdum massa id, malesuada rutrum ligula.
+            Suspendisse tempor quis mauris eu facilisis. Phasellus non volutpat diam, non dapibus ligula. Ut non
+            molestie ex, nec sagittis mi. Curabitur suscipit tellus id dolor pretium blandit. Cras tristique tristique
+            pharetra.</p>
+        </div>
+      </div>
+      <div class="dw-pnl "><img src="https://unsplash.it/425/?random" class="dw-pnl__cntnt" />
+      </div>
+      <div class="dw-pnl dw-pnl--fcs">
+        <div class="dw-pnl__cntnt tx--white bd--white tx--center">
+          <h1>Focus on hover</h1>
+        </div>
+      </div>
+      <div class="dw-pnl ">
+        <div class="dw-pnl__cntnt tx--white bd--white">
+          <h2>Title for some content</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu justo ex. Praesent mollis augue sagittis
+            eros pharetra feugiat. Phasellus dignissim est lacus. Sed nec imperdiet dolor, sit amet mattis ex. Sed sed
+            augue eu neque tristique commodo. Mauris aliquet tortor sollicitudin nibh molestie, id egestas nisl
+            sollicitudin. Aliquam erat volutpat. Donec quis ultrices ligula. Cras sed purus risus. Curabitur quis eros
+            eu tortor semper eleifend.</p>
+        </div>
+      </div>
+      <div class="dw-pnl dw-pnl--pls">
+        <div class="dw-pnl__cntnt tx--white bd--white bg--darkred tx--center">
+          <h1>Pulse on hover</h1>
+        </div>
+      </div>
+      <div class="dw-pnl "><img src="https://unsplash.it/440/?random" class="dw-pnl__cntnt" />
+      </div>
+      <div class="dw__fcs-crtn"></div>
+    </div>
+  </div>
+  <div class="register-page" >
+    <div id="wrapper">
+      <div class="form-container">
+        <span class="form-heading">&nbsp;SIGN UP</span>
+        <form action="">
+          <div class="input-group">
+            <input type="text" placeholder="Email adress..." name="email" id="email" required>
+            <span class="bar"></span>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Username desired..." required>
+            <span class="bar"></span>
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder="Password..."  name="psw" id="psw" required>
+            <span class="bar"></span>
+          </div>
+          <br>
+          <div class="input-group">
+            <button>
+              <span style>Sign up &nbsp;</span><i class="fas fa-sign-in-alt"></i>
+            </button>
+          </div>
+        </form>
+        <div class="social-login">
+
+          <span>Or sign up with:</span>
+          <div class="social-icons">
+            <button>
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button>
+              <i class="fab fa-google"></i>
+            </button>
+            <button>
+              <i class="fab fa-twitter"></i>
+            </button>
+          </div>
+        </div>
+        <div class="anunt"><p>By creating an account, you agree to the Terms of Service. For more information about Recon's privacy practices, see the Recon Privacy Statement. We'll occasionally send you account-related emails.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="selector">
+    <form class="form-horizontal">
+      <div class="form-group">
+          <label for="inputFirstName" class="col-sm-2 control-label">First Name</label>
+
+          <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputFirstName" placeholder="">
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLastName" placeholder="">
+          </div>
+      </div>
+
+      <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" class="btn btn-default" onclick="insert()">Submit</button>
+          </div>
+      </div>
+  </form>
+
+  <div>
+      <ul class="list-group">
+          <li class="list-group-item hide" id="results">
+          </li>
+      </ul>
+  </div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./fun.js"></script>
+  </div>
+    
+    
+</body>
+
 </html>
