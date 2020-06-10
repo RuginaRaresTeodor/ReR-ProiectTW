@@ -636,7 +636,7 @@ form {
 
   background-color: #FFFBFA;
 }
-.register-page #wrapper {
+.register-page #wrapper2 {
     transform: rotateX(0deg);
     top: 10%;
     align-items: left;
@@ -645,6 +645,12 @@ form {
     border-right-color: #000;
     border-left-style: solid;
     border-left-color: #000;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      position: relative;
 } 
 .selector {
   width:100%;
