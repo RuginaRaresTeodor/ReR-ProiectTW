@@ -148,7 +148,7 @@ while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
        
   
       # $order_id = $_POST['id_adresa'];
-       $url = "http://localhost:2000/rares/api.php?id_adresa=".trim($item);
+       $url = "http://localhost:2000/ok/api.php?id_adresa=".trim($item);
  
         $client = curl_init($url);
         curl_setopt($client,CURLOPT_RETURNTRANSFER,true);

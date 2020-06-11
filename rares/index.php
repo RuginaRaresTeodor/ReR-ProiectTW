@@ -1,5 +1,46 @@
-<!DOCTYPE html>
 
+
+<html>
+
+<head>
+  <title>Recon</title>
+  <meta name="description" content="We recon for you!">
+  <meta name="author" content="Rares Rugina & Marius Roman">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="profile.png" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="json/fun.js"></script>
+  <script type="text/javascript" src="json/gfapi.js"></script>
+  <script type="text/javascript" src="json/feeds.js"></script>
+  <style type="text/css">
+    td
+      {
+       padding:0 15px;
+      }
+</style>
+<script>
+           <?php
+       require_once "config.php";
+
+       $stid = oci_parse($link, "SELECT * FROM feeds");
+       oci_execute($stid);
+       while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+          foreach ($row as $item) {
+              //echo $item." \n  ";
+              $g="start("."'$item'".")";
+              echo '<script type="text/javascript">'.$g.';</script>';
+
+          }}
+         
+
+?>
+        </script>
+</head>
+
+<body>
 <?php
 // Include config file
 
@@ -43,30 +84,6 @@ if(isset($_SESSION["id"])and $_SESSION["id"]!="99") {
 
 }
 ?>
-
-
-<html>
-
-<head>
-  <title>Recon</title>
-  <meta name="description" content="We recon for you!">
-  <meta name="author" content="Rares Rugina & Marius Roman">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="profile.png" />
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="json/fun.js"></script>
-  <style type="text/css">
-    td
-      {
-       padding:0 15px;
-      }
-</style>
-</head>
-
-<body>
   <div class="nav">
     <img src="logo.svg" alt="logo">
     <div class="nav-button" id="acc" onclick="changepage1()">feed</div>
@@ -92,7 +109,7 @@ if(isset($_SESSION["id"])and $_SESSION["id"]!="99") {
       <div id="wrapper">
         <div class="form-container">
           <span class="form-heading">Login</span>
-          <form method="post" action="">
+          <form method="post">
                             <div class="message"><?php if($message!="") { echo $message; } ?></div>
                             <div class="input-group">
                                 <input type="text" name="username" placeholder="Email or username..." required>
@@ -282,6 +299,7 @@ if(isset($_SESSION["id"])and $_SESSION["id"]!="99") {
       <div class="dw-pnl dw-pnl--pls">
         <div class="dw-pnl__cntnt tx--white bd--white bg--darkred tx--center">
           <h1>Pulse on hover</h1>
+          <div id="feed"></div>
         </div>
       </div>
       <div class="dw-pnl "><img src="https://unsplash.it/440/?random" class="dw-pnl__cntnt" alt="random"/>
@@ -479,8 +497,9 @@ oci_bind_by_name($compiled, ':r_desc',$A_id2);
 oci_execute($compiled);
 }}
 ?>
+<div class="register-page2">
 <div class="form-container">
-        </br>  </br>  </br>  </br>
+      
         
       
 
@@ -522,9 +541,7 @@ $domain = array_unique($pars);
 foreach ($domain as $i){
     echo '<div class="topleft">';
     echo "<table class='minimalistBlack'>";
-    echo "<thead>
-    <tr><th>Domeniu:$i</th></tr></thead>
-    <tbody>";
+    echo "<thead><tr><th>Domeniu:$i</th></tr></thead><tbody>";
 #echo "#".$i."#";
 $sti = oci_parse($conn, "SELECT titlu||'#'||link_site FROM adresa where domeniu='$i'");
 oci_execute($sti);
@@ -579,9 +596,6 @@ Welcome <?php echo $_SESSION["name"]; ?>. Click here to <a href="logout.php" tit
   
    
   </div>
-  </div>
-  <div class="selector">
-    
   </div>
   </div>
     
