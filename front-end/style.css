@@ -215,6 +215,12 @@ body {
   overflow: scroll;
   
 } 
+#wrapper2::-webkit-scrollbar {
+  display: none;
+}
+#wrapper2 {
+  -ms-overflow-style: none;
+}  
 #wrapper::-webkit-scrollbar {
   display: none;
 }
@@ -679,7 +685,7 @@ form {
     height: 90vh;
     position: absolute;
     margin-top:10vh;
-    overflow: hidden;
+    overflow: scroll;
     /* display block pentru lucru -modifica dupa in none*/
     display: none;
   
@@ -697,9 +703,10 @@ form {
       width: 90%;
       margin: 0 auto;
       display: flex;
+      overflow:scroll;
       justify-content: center;
       align-items: center;
-        position: relative;
+      position: relative;
   } 
   .selector {
     width:100%;
