@@ -34,7 +34,7 @@ body {
   cursor: pointer;
   color: #011627;
   text-transform: uppercase;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   -webkit-transition : all 0.2s ease-in-out ;
@@ -183,7 +183,7 @@ body {
     position:absolute;
     margin-right: 0%;
     margin-left:50%;
-    margin-top:-5%;
+    margin-top:3%;
     float: right;
     overflow: hidden;
     transform :rotate(12deg);
@@ -200,7 +200,7 @@ body {
     to {
         margin-right: 0%;
         margin-left:50%;
-        margin-top:-5%;
+        margin-top:3%;
     }
 }
 
@@ -666,7 +666,42 @@ form {
     }
   }
 
-
+  .register-page {
+    width:100%;
+    height: 90vh;
+    position: absolute;
+    margin-top:10vh;
+    overflow: hidden;
+    /* display block pentru lucru -modifica dupa in none*/
+    display: none;
+  
+    background-color: #FFFBFA;
+  }
+  .register-page #wrapper2 {
+      transform: rotateX(0deg);
+      top: 10%;
+      align-items: left;
+      width:100%;
+      border-right-style: solid;
+      border-right-color: #000;
+      border-left-style: solid;
+      border-left-color: #000;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        position: relative;
+  } 
+  .selector {
+    width:100%;
+    height: 90vh;
+    position: absolute;
+    margin-top:10vh;
+    overflow: hidden;
+    display: none;
+    background-color: #FFFBFA;
+  }
 @media screen and (max-width: 1025px){
 
 	.form-container::before {
@@ -727,11 +762,12 @@ form {
     align-self:center;
     padding-top:10%;
     width:40%;
-    margin-right:20%;
+    margin-right:28%;
   }
   .first-page .left h3 {
-    padding-top:35%;
-    font-size: 80%;
+    padding-top:25%;
+    font-size: 100%;
+    align-self:center;
   }
 }
 @media screen and (max-width: 414px){
@@ -794,8 +830,11 @@ form {
     overflow: scroll;
   }
   .first-page .left h1 {
-    padding-left:22%;
     padding-top:20%;
+    padding-left:20%;
+    width:100%;
+    float:left;
+    height:20%;
   }
   .first-page .left h3 {
     padding-top:34%;
@@ -811,7 +850,7 @@ form {
 		height: 8rem;
   }
   .first-page {overflow:auto;}
-  .form-container{
+  .wrapper .form-container{
     position:relative;
     margin-top: -70%;
   }
@@ -821,7 +860,10 @@ form {
     display:none;
     margin-top: -20%;
 	}
-
+  .wrapper2 .form-container {
+    margin-top:0%;
+    position:relative;
+  }
 	form {
 		border-radius: 0px;
 		transform: initial;
@@ -883,7 +925,7 @@ form {
 		height: 8rem;
   }
   .first-page {overflow:auto;}
-  .form-container{
+  .wrapper .form-container{
     position:relative;
     margin-top: -70%;
   }
@@ -892,8 +934,27 @@ form {
     transform: translateX(-50%);
     display:none;
     margin-top: -20%;
+  }
+  .wrapper2 .form-heading {
+		left: 5%;
+    transform: translateX(-50%);
+    display:none;
+    margin-top: -20%;
 	}
-
+  .register-page {
+    width:100%;
+    height: 140vh;
+    position: absolute;
+    margin-top:10vh;
+    overflow: scroll;
+    /* display block pentru lucru -modifica dupa in none*/
+    display: none;
+    background-color: #FFFBFA;
+  }
+  .wrapper2 .form-container {
+    margin-top:0%;
+    position:relative;
+  }
 	form {
 		border-radius: 0px;
 		transform: initial;
@@ -954,45 +1015,13 @@ form {
   }
 }
 
-.register-page {
-  width:100%;
-  height: 90vh;
-  position: absolute;
-  margin-top:10vh;
-  overflow: hidden;
-  /* display block pentru lucru -modifica dupa in none*/
-  display: none;
 
-  background-color: #FFFBFA;
-}
-.register-page #wrapper2 {
-    transform: rotateX(0deg);
-    top: 10%;
-    align-items: left;
-    width:100%;
-    border-right-style: solid;
-    border-right-color: #000;
-    border-left-style: solid;
-    border-left-color: #000;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      position: relative;
-} 
-.selector {
-  width:100%;
-  height: 90vh;
-  position: absolute;
-  margin-top:10vh;
-  overflow: hidden;
-  display: none;
-  background-color: #FFFBFA;
-}
 @media screen and (max-width: 540px){
   .nav .nav-button {
     display:none;
+  }
+  .nav .menu {
+    display:flex;
   }
 
 }
