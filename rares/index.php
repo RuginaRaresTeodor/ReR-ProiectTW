@@ -67,6 +67,13 @@ if(isset($_SESSION["id"])and $_SESSION["id"]!="99") {
     <div class="nav-button" id="poc" ><a href="logedon.php">your place</a></div>
     <div class="nav-button" onclick="changefromlogin()">settings</div>
     <div class="nav-button" onclick="changepage2()">Home</div>
+    <div class="menu" onclick="menufunction()">Menu</div>
+    
+  </div>
+  <div class="full-menu">
+    <div class="nav-button"  onclick="changepage1()">feed</div>
+    <div class="nav-button" onclick="changepage3()">settings</div>
+    <div class="nav-button" onclick="changepage2()">Home</div>
   </div>
   <div class="first-page">
     <div class="left">
