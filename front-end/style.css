@@ -212,7 +212,15 @@ body {
 	align-items: center;
     position: relative;
     transform: rotate(-12deg);
-}   
+  overflow: scroll;
+  
+} 
+#wrapper::-webkit-scrollbar {
+  display: none;
+}
+#wrapper {
+  -ms-overflow-style: none;
+}  
 .form-container {
 	width: 100%;
 	height: 70%;
