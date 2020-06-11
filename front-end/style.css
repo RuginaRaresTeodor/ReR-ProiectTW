@@ -26,6 +26,67 @@ body {
     margin-top:1.3%;
     height:67%;
 }
+.nav .menu {
+  width:10%;
+  margin-top:0%;
+  height:100%;
+  margin-left:5%;
+  cursor: pointer;
+  color: #011627;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition : all 0.2s ease-in-out ;
+  -moz-transition : all 0.2s ease-in-out ;
+  transition : all 0.2s ease-in-out ;
+}
+.full-menu {
+  margin: 0%;
+  justify-content: center;
+  align-items: center;
+}
+.full-menu .nav-button {
+  width:100%;
+  height:25%;
+  cursor: pointer;
+  color: #011627;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition : all 0.2s ease-in-out ;
+  -moz-transition : all 0.2s ease-in-out ;
+  transition : all 0.2s ease-in-out ;
+}
+.full-menu .nav-button:hover {
+  color:#56CFE1;
+  border-bottom:#56CFE1;
+  -webkit-transition : all 0.2s ease-in-out ;
+  -moz-transition : all 0.2s ease-in-out ;
+  transition : all 0.2s ease-in-out ;
+  letter-spacing: 2px;
+  animation-name: button-color;
+  animation-duration: 3s;
+}
+.nav .menu:hover {
+  color:#56CFE1;
+  border-bottom:#56CFE1;
+  -webkit-transition : all 0.2s ease-in-out ;
+  -moz-transition : all 0.2s ease-in-out ;
+  transition : all 0.2s ease-in-out ;
+  letter-spacing: 2px;
+  animation-name: button-color;
+  animation-duration: 3s;
+}
+@keyframes button-color {
+  from {
+      color:#56CFE1;
+      }
+  to {
+      color: #011627;
+  }
+}
 .nav .nav-button {
     width:10%;
     float: right;
@@ -68,6 +129,14 @@ body {
     margin-top:10vh;
     overflow: hidden;
     display: block;
+}
+.full-menu {
+  margin-top:30%;
+  width:100%;
+  height: 90vh;
+  position: absolute;
+  overflow:hidden;
+  display: none;
 }
 .first-page .left {
     width:60%;
@@ -498,9 +567,6 @@ form {
   .tx--center {
     text-align: center;
   }
-  body {
-    font-family: 'Open Sans', sans-serif;
-  }
   h3 {
     margin-top: 0;
   }
@@ -923,4 +989,10 @@ form {
   overflow: hidden;
   display: none;
   background-color: #FFFBFA;
+}
+@media screen and (max-width: 540px){
+  .nav .nav-button {
+    display:none;
+  }
+
 }
