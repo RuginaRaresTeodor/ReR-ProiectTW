@@ -9,10 +9,42 @@ td
 session_start();
 
 if(!isset($_SESSION["id"])){
-    $_SESSION["id"] = "99";
+    
+    $_SESSION["id"] = UniqueMachineID();
     $_SESSION["name"] = "guest";}
     
+
+    function UniqueMachineID($salt = "") {  
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {  
+              
+            $temp = sys_get_temp_dir().DIRECTORY_SEPARATOR."diskpartscript.txt";  
+            if(!file_exists($temp) && !is_file($temp)) file_put_contents($temp, "select disk 0\ndetail disk");  
+            $output = shell_exec("diskpart /s ".$temp);  
+            $lines = explode("\n",$output);  
+            $result = array_filter($lines,function($line) {  
+                return stripos($line,"ID:")!==false;  
+            });  
+              
+              
+            if(count($result)>0) {  
+                $result = array_shift(array_values($result));  
+                $result = explode(":",$result);  
+                $result = trim(end($result));         
+            } else $result = $output;         
+        } else {  
+            $result = shell_exec("blkid -o value -s UUID");    
+            if(stripos($result,"blkid")!==false) {  
+                $result = $_SERVER['HTTP_HOST'];  
+            }  
+        }     
+        $str = preg_replace('/\D/', '', md5($salt.md5($result)));
+
+        return $str;  
+    }  
+      
+      
 ?>
+
 <?php
 /*
 if (isset($_POST['id_adresa']) && $_POST['id_adresa']!="") {
@@ -84,7 +116,6 @@ oci_execute($compiled);
 ?>
  
 <?php
-
 $conn  =  oci_connect('student', 'student','localhost:1521/xe');
 if (!$conn) {
     $m = oci_error();
@@ -94,7 +125,7 @@ if (!$conn) {
 if($_SESSION["id"])
 $id=$_SESSION["id"];
 else
-$id=999;
+$id= $_SESSION["id"];
 $stid = oci_parse($conn, "SELECT adresa_id FROM relatii where user_id=$id");
 oci_execute($stid);
 //vezi ce domenii ai si la final parcurgi domeniu cu domeniu
@@ -123,9 +154,9 @@ while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
 $domain = array_unique($pars);
 
 foreach ($domain as $i){
-    echo "</br><table class='minimalistBlack'>";
+    echo "<table class='minimalistBlack'>";
     echo "<thead>
-    <tr></br><a>aici</a><th>Domeniu:$i</th></tr></thead>
+    <tr><th>Domeniu:$i</th></tr></thead>
     <tbody>";
 #echo "#".$i."#";
 $sti = oci_parse($conn, "SELECT titlu||'#'||link_site FROM adresa where domeniu='$i'");

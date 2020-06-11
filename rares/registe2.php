@@ -93,7 +93,11 @@ oci_execute($compiled);
   <div class="register-page2"  >
    
       <div class="form-container">
-          
+        </br>  </br>  </br>  </br>
+        
+      
+
+
 <?php
 $conn  =  oci_connect('student', 'student','localhost:1521/xe');
 if (!$conn) {
@@ -133,6 +137,7 @@ while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
 $domain = array_unique($pars);
 
 foreach ($domain as $i){
+    echo '<div class="topleft">';
     echo "<table class='minimalistBlack'>";
     echo "<thead>
     <tr><th>Domeniu:$i</th></tr></thead>
@@ -149,11 +154,11 @@ while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
         echo "<tr><td><a href=$bd_link> $bd_titlu</a></td></tr>";
     }
  } echo "</tbody></table></br>";
+ echo "</div>";
 
 }
  
     ?>
-        <span class="form-heading">&nbsp;SIGN UP</span>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($k_titlu_err)) ? 'has-error' : ''; ?>">
                 <label>Title</label>
