@@ -2,7 +2,49 @@
 <html>
 <link rel="stylesheet" type="text/css" href="tabel.css">
   <head>
-  
+    <style>
+      body{
+        background-color:#5E60CE;
+        padding-top:20px;
+        padding-left:20px;
+        -webkit-column-count: 2;
+         -moz-column-count: 2;
+         column-count: 2;
+      }
+      table{
+        break-inside: avoid;
+        color:  #FFFBFA;
+        border-bottom: 1px solid #ddd;
+      }
+      a {
+        color:  #FFFBFA;
+      }
+      .dw h3 { text-align: center;
+      width:100%;}
+       td:hover {
+  background-color: white;
+  -webkit-transition : all 0.5s ease-in-out ;
+  -moz-transition : all 0.5s ease-in-out ;
+  transition : all 0.5s ease-in-out ;
+  letter-spacing: 2px;
+}
+ td:hover > a {
+  color: black;
+  -webkit-transition : all 0.2s ease-in-out ;
+  -moz-transition : all 0.2s ease-in-out ;
+  transition : all 0.2s ease-in-out ;
+  letter-spacing: 2px;
+  animation-name: da;
+  animation-duration: 3s;
+}
+
+  body .nav {
+    height:20%;
+    width:100%;
+    background-color:white;
+    position:fixed;
+  }
+    </style>
     <script type="text/javascript" src="json/gfapi.js"></script>
 
     <script type="text/javascript">
@@ -89,6 +131,8 @@ feed.load(function(result) {
 ?>
     
         </script>
+        <h1 style="align-self:center; font-size: 40; color:white;">Your Feed<h1>
     <div id="feed"></div>
+</form>
   </body>
 </html>
