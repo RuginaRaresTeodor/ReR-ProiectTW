@@ -416,6 +416,7 @@ padding-top: 2px;
      -moz-column-gap: 0;
           column-gap: 0;
   position: relative;
+  
 }
 .dw * {
   box-sizing: border-box;
@@ -440,16 +441,16 @@ padding-top: 2px;
 }
 @media (min-width: 992px) {
   .dw {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
   }
 }
 @media (min-width: 1500px) {
   .dw {
-  -webkit-column-count: 4;
-  -moz-column-count: 4;
-  column-count: 4;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
   }
 }
 .dw-pnl {
@@ -1056,10 +1057,32 @@ form {
   text-decoration: none;
 
 }
-a:visited{
-  color: black;
-
-}
 
 .topleft {
   display:inline-block}
+.dw a {
+  color:white;
+}
+.gogu {
+  border-bottom: 1px solid #ddd;
+}
+.dw h3 { text-align: center;
+width:100%;}
+.gogu td:hover {
+  background-color: white;
+  -webkit-transition : all 0.5s ease-in-out ;
+  -moz-transition : all 0.5s ease-in-out ;
+  transition : all 0.5s ease-in-out ;
+  letter-spacing: 2px;
+}
+.gogu td:hover > a {
+  color: black;
+  -webkit-transition : all 0.2s ease-in-out ;
+  -moz-transition : all 0.2s ease-in-out ;
+  transition : all 0.2s ease-in-out ;
+  letter-spacing: 2px;
+  animation-name: da;
+  animation-duration: 3s;
+}
+
+

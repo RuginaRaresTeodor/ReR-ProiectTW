@@ -1,5 +1,4 @@
 
-
 <html>
 
 <head>
@@ -21,8 +20,11 @@
        padding:0 15px;
       }
 </style>
-<script>
-           <?php
+
+</head>
+
+<body>
+<?php
        require_once "config.php";
 
        $stid = oci_parse($link, "SELECT * FROM feeds");
@@ -37,10 +39,6 @@
          
 
 ?>
-        </script>
-</head>
-
-<body>
 <?php
 // Include config file
 
@@ -176,135 +174,7 @@ if(isset($_SESSION["id"])and $_SESSION["id"]!="99") {
     </div>
   </div>
   <div class="second-page">
-    <div class="dw">
-      <div class="dw-pnl dw-pnl--fcs">
-        <div class="dw-pnl__cntnt bd--white tx--white">
-          <h1>Pure CSS masonry layout</h1>
-        </div>
-      </div>
-      <div class="dw-pnl">
-        <div class="dw-pnl__cntnt bd--white tx--white">
-          <ul>
-            <li>Configurable</li>
-            <li>Responsive</li>
-            <li>Supports clusters</li>
-          </ul>
-        </div>
-      </div>
-      <div class="dw-pnl "><img src="https://unsplash.it/419/?random" class="dw-pnl__cntnt" alt="random" />
-      </div>
-      <div class="dw-pnl ">
-        <div class="dw-pnl__cntnt tx--white bd--white">
-          <p>Phasellus malesuada, urna non auctor viverra, libero ex pellentesque urna, id rhoncus eros lacus tristique
-            risus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-        </div>
-      </div>
-      <div class="dw-pnl ">
-        <img src="https://unsplash.it/445/?random" class="dw-pnl__cntnt" alt="random"/>
-      </div>
-      <div class="dw-pnl ">
-        <img src="https://unsplash.it/423/?random" class="dw-pnl__cntnt" alt="random" />
-      </div>
-      <div class="dw-pnl dw-clstr dw-clstr--hrz">
-        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--rw ">
-          <div class="dw-pnl dw-clstr__sgmnt ">
-            <div class="dw-pnl__cntnt bd--white tx--white">
-              <h2>How</h2>
-            </div>
-          </div>
-        </div>
-        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--rw ">
-          <div class="dw-pnl dw-clstr__sgmnt ">
-            <div class="dw-pnl__cntnt bd--white tx--white">
-              <h2>about</h2>
-            </div>
-          </div>
-          <div class="dw-pnl dw-clstr__sgmnt ">
-            <div class="dw-pnl__cntnt bd--white tx--white">
-              <h2>clusters?</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dw-pnl ">
-        <img src="https://unsplash.it/420/?random" class="dw-pnl__cntnt" alt="random"/>
-      </div>
-      <div style="height: 200px;" class="dw-pnl dw-flp">
-        <div class="dw-pnl__cntnt dw-flp__cntnt">
-          <div class="dw-flp__pnl dw-flp__pnl--frnt tx--white bd--white tx--center">
-            <h1>You can flip me round</h1>
-          </div>
-          <div class="dw-flp__pnl dw-flp__pnl--bck bd--white tx--white tx--center">
-            <h1>Yeah that's right</h1>
-          </div>
-        </div>
-      </div>
-      <div class="dw-pnl dw-clstr dw-clstr--vrt">
-        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--clmn ">
-          <div class="dw-pnl dw-clstr__sgmnt ">
-            <div class="dw-pnl__cntnt bd--white tx--white">
-              <h2>A</h2>
-            </div>
-          </div>
-        </div>
-        <div class="dw-clstr__sgmnt dw-clstr__sgmnt--clmn ">
-          <div class="dw-pnl dw-clstr__sgmnt ">
-            <div class="dw-pnl__cntnt bd--white tx--white">
-              <h2>vertically</h2>
-            </div>
-          </div>
-          <div class="dw-pnl dw-clstr__sgmnt ">
-            <div class="dw-pnl__cntnt bd--white tx--white">
-              <h2>flowed</h2>
-            </div>
-          </div>
-          <div class="dw-pnl dw-clstr__sgmnt ">
-            <div class="dw-pnl__cntnt bd--white tx--white">
-              <h2>cluster</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dw-pnl "><img src="https://unsplash.it/424/?random" class="dw-pnl__cntnt" alt="random" />
-      </div>
-      <div class="dw-pnl ">
-        <div class="dw-pnl__cntnt bd--white bg--darkred tx--white">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu justo ex. Praesent mollis augue sagittis
-            eros pharetra feugiat. Phasellus dignissim est lacus. Sed nec imperdiet dolor, sit amet mattis ex. Sed sed
-            augue eu neque tristique commodo. Mauris aliquet tortor sollicitudin nibh molestie, id egestas nisl
-            sollicitudin. Aliquam erat volutpat. Donec quis ultrices ligula. Cras sed purus risus. Curabitur quis eros
-            eu tortor semper eleifend. Pellentesque lorem elit, dignissim interdum massa id, malesuada rutrum ligula.
-            Suspendisse tempor quis mauris eu facilisis. Phasellus non volutpat diam, non dapibus ligula. Ut non
-            molestie ex, nec sagittis mi. Curabitur suscipit tellus id dolor pretium blandit. Cras tristique tristique
-            pharetra.</p>
-        </div>
-      </div>
-      <div class="dw-pnl "><img src="https://unsplash.it/425/?random" class="dw-pnl__cntnt" alt="random" />
-      </div>
-      <div class="dw-pnl dw-pnl--fcs">
-        <div class="dw-pnl__cntnt tx--white bd--white tx--center">
-          <h1>Focus on hover</h1>
-        </div>
-      </div>
-      <div class="dw-pnl ">
-        <div class="dw-pnl__cntnt tx--white bd--white">
-          <h2>Title for some content</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu justo ex. Praesent mollis augue sagittis
-            eros pharetra feugiat. Phasellus dignissim est lacus. Sed nec imperdiet dolor, sit amet mattis ex. Sed sed
-            augue eu neque tristique commodo. Mauris aliquet tortor sollicitudin nibh molestie, id egestas nisl
-            sollicitudin. Aliquam erat volutpat. Donec quis ultrices ligula. Cras sed purus risus. Curabitur quis eros
-            eu tortor semper eleifend.</p>
-        </div>
-      </div>
-      <div class="dw-pnl dw-pnl--pls">
-        <div class="dw-pnl__cntnt tx--white bd--white bg--darkred tx--center">
-          <h1>Pulse on hover</h1>
-          <div id="feed"></div>
-        </div>
-      </div>
-      <div class="dw-pnl "><img src="https://unsplash.it/440/?random" class="dw-pnl__cntnt" alt="random"/>
-      </div>
-      <div class="dw__fcs-crtn"></div>
+    <div class="dw" id="dut">
     </div>
   </div>
   <div class="register-page" >
