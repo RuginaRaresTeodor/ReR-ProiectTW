@@ -1,20 +1,127 @@
-!doctype html>
 <html>
-  <head>
-    <title>Recon ReR</title>
-    <script src="popup.js"></script>
-	meta name="description" content="We recon for you!">
-  	<meta name="author" content="Rares Rugina & Marius Roman">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<link rel="shortcut icon" type="image/x-icon" href="profile.png" />
-  	<link rel="stylesheet" type="text/css" href="style.css">
-  	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  	<script src="fun.js"></script>
-  </head>
+	<head><script>document.addEventListener('DOMContentLoaded', function() {
+		var checkPageButton = document.getElementById('checkPage');
+		checkPageButton.addEventListener('click', function() {
+	  
+		  chrome.tabs.getSelected(null, function(tab) {
+			d = document;
+	  
+			var f = d.createElement('form');
+			f.action = 'http://gtmetrix.com/analyze.html?bm';
+			f.method = 'post';
+			var i = d.createElement('input');
+			i.type = 'hidden';
+			i.name = 'url';
+			i.value = tab.url;
+			f.appendChild(i);
+			d.body.appendChild(f);
+			f.submit();
+		  });
+		}, false);
+	  }, false);</script>
+	  
+	  
+	  
+	  <script type="text/javascript" src="json/gfapi.js"></script>
+
+	  <script type="text/javascript">
+  
+	  google.load("feeds", "1");
+	  var k=1;
+	  
+	  function initialize(address) {
+		var feed = new google.feeds.Feed(address);
+  
+  //var feed = new google.feeds.Feed("https://stirileprotv.ro/rss");
+  feed.load(function(result) {
+	if (!result.error) {
+	  var container = document.getElementById("feed");
+	  var table = document.createElement('table');
+	  var b = document.createElement('br');
+	  container.appendChild(b);
+	  
+	  var hh=0;
+	  for (var i = 0; i < result.feed.entries.length; i++) {
+		var entry = result.feed.entries[i];
+			  var student;
+			  
+				  student = {
+					  name: entry.publishedDate,
+					  rank: entry.title,
+					  stuclass:entry.categories,
+				  };
+				  
+				 
+				 
+				  if (hh==0){
+			  var text = document.createElement('a');
+			  var newBaitText = document.createTextNode(entry.categories);
+			  text.appendChild(newBaitText);
+			  container.appendChild(text); 
+			  container.appendChild(b);
+			  
+				  }
+  
+				  var row = table.insertRow(hh);
+				  hh=hh+1;
+				  var cell1 = row.insertCell(0);
+				  var cell2 = row.insertCell(1);
+				  var cell3 = row.insertCell(2);
+				  
+				  cell1.innerHTML = student.name,
+				  cell2.innerHTML = '<a href="'+entry.link+'">'+entry.title+'</a>',
+				  //cell3.innerHTML = student.rank;
+				  container.appendChild(table); 
+				  container.appendChild(b);
+		  }
+		
+			  }});
+	  }
+  
+	  
+	  function start(address){
+	   google.setOnLoadCallback(initialize(address));
+  
+	  }
+	  //start("https://stirileprotv.ro/rss");
+	  </script>
+	  <style>
+		  body * {
+			  align-items: center;
+			  width: 130px;
+			  color:white;
+		  }
+		  body h1 {
+			  color:black;
+		  }
+		  body{background-color: black;
+		  border-radius: 4%;}
+		  #checkPage {
+			  color : black;
+			  background-color :blanchedalmond;
+		  }
+	  </style>
+	  <script>
+		function myFunction() {
+		  window.open("https://www.w3schools.com");
+		}
+		</script>
+		<script src="popup.js"></script>
+		  <meta name="author" content="Rares Rugina & Marius Roman">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  <link rel="shortcut icon" type="image/x-icon" href="profile.png" />
+		  <link rel="stylesheet" type="text/css" href="style.css">
+		  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+		  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		  <script src="fun.js"></script></head>
+	
   <body>
+	  
+	<script>
+		
+	 </script>
     <h1>Recon Rer</h1>
-    <button id="checkPage">Check this page now!</button>
+	<button id="checkPage" >Check news</button>
   </body>
 </html>
