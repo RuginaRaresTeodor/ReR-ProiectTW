@@ -1,9 +1,11 @@
 <?php
-	include 'config.php';
-	$msg1=$_POST['id'];
-    $msg2=$_POST['site'];
-    
+header("Content-Type:application/json");
 
+	include 'config.php';
+	$msg1=$_GET['id'];
+    $msg2=$_GET['site'];
+    
+if (isset($_GET['id'])and isset($_GET['site']) ){
 	$sql = 'INSERT INTO link_feed '.
        'VALUES(:user_id, :feed_site)';
 
@@ -14,6 +16,9 @@
 
     oci_execute($compiled);
 	
-    echo 'json_encode(array("statusCode"=>200))';
+    echo 'success';
+}
+else
+echo 'id si site null';
 ?>
  

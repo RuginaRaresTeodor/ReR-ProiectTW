@@ -516,7 +516,6 @@ while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
 
         echo '
         <script src="json/ajax.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <tr><td>'.$bd_domeniu.'</td>
                   <td>'.$bd_titlu.'</td>
@@ -568,7 +567,8 @@ Welcome <?php echo $_SESSION["name"]; ?>. Click here to <a href="logout.php" tit
   </div>
   </div>
   </div>
-  
+  <div id = 'ajaxDiv'></div>
+
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
 (function($)

@@ -57,7 +57,7 @@ $ff=array("link","description");
 $ff["link"]=$item_link2;
 $ff["description"]=$item_desc2;
 
-    echo "############################";////APEL POP UP
+    //echo "############################";////APEL POP UP
     news($ff);
 
 
