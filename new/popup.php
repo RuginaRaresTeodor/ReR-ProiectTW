@@ -51,7 +51,7 @@ $Atime["min"]=$interval->format('%i');
 $Atime["month"]=$interval->format('%m');
 $Atime["year"]=$interval->format('%Y');
 
-if($Atime["month"]==0 and $Atime["year"]==0 and $Atime["day"]==0 and $Atime["hour"]==0 and ($Atime["min"]<=1)){
+if($Atime["month"]==0 and $Atime["year"]==0 and $Atime["day"]==0 and $Atime["hour"]==0 and ($Atime["min"]==1)){
 
 $ff=array("link","description");
 $ff["link"]=$item_link2;

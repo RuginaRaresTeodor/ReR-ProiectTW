@@ -236,8 +236,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['register'])){
 
     $unume=trim($_POST["username"]);
     $umail=trim($_POST["mail"]);
-    $url = "http://localhost:2000/rares/apiUser.php?id_adresa='".$unume."'";
-    $url2 = "http://localhost:2000/rares/apiUser.php?id_adresa='".$umail."'";
+    $url = "http://localhost:2000/new/apiUser.php?id_adresa='".$unume."'";
+    $url2 = "http://localhost:2000/new/apiUser.php?id_adresa='".$umail."'";
 
  
 $client = curl_init($url);
@@ -367,7 +367,7 @@ foreach ($row as $item) {
 
 $k_titlu = $k_domeniu = $k_link = "";
 $k_titlu_err = $k_domeniu_err = $k_link_err = "";
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if($_SERVER["REQUEST_METHOD"] == "POST" and $_SESSION['id']<100000){
  
     // Validate username
     if(empty(trim($_POST["k_titlu"]))){
@@ -485,6 +485,48 @@ if(isset($_SESSION["id"]) and $_SESSION["id"]<1111111)
 
 
     ?>
+    <?php
+    function refresh(){		
+      		header("Refresh:0; url=index.php");
+    };
+include "config.php";
+$id= $_SESSION["id"];
+
+    echo '<div class="add">';
+    echo "<table class='abonament'>";
+    echo "<thead><tr><th>Domeniu</th><th>Titlu</th><th>add</th></tr></thead><tbody>";
+#echo "#".$i."#";
+$sti = oci_parse($link, "select titlu||'#'||domeniu||'#'||link_site from adresa a where exists
+
+(select A from (
+select (link_site) as A from adresa 
+minus
+select (feed_site) as A from link_feed
+where user_id=$id) where A = a.link_site
+)order by domeniu
+");
+oci_execute($sti);
+while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
+    foreach ($row as $item) {
+        $user= (explode("#",$item));
+        $bd_titlu=$user[0];
+        $bd_domeniu=trim($user[1]);
+        $bd_link=trim($user[2]);
+        $g="ajax_add_feed_to_user("."'$id',"."'$bd_link'".")";
+
+        echo '
+        <script src="json/ajax.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<tr><td>'.$bd_domeniu.'</td>
+                  <td>'.$bd_titlu.'</td>
+        <td align="center"><button onclick="'.$g.';location.reload();">Add</button>
+        </td>  </tr>';
+        
+    }
+ } echo "</tbody></table></br>";
+ echo "</div>";
+?>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($k_titlu_err)) ? 'has-error' : ''; ?>">
                 <label>Title</label>

@@ -5,6 +5,7 @@ function changepage1() {
   document.getElementsByClassName('selector')[0].style.display = "none";
   document.getElementsByClassName('full-menu')[0].style.display = "none";
 }
+
 function changepage2() {
   document.getElementsByClassName('first-page')[0].style.display = "block";
   document.getElementsByClassName('second-page')[0].style.display = "none";

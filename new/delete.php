@@ -25,6 +25,7 @@ echo "Error Delete [".$e['message']."]";
 }  
 oci_close($link); 
 //header("Refresh:0; url=index.php");
+header("Refresh:0; url=index.php");
 
 ?>  
 </body>  
