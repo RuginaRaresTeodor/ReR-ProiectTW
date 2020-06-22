@@ -3,7 +3,6 @@
 
 
 function news($block){
-  echo '<script type="text/javascript">changefromlogin();</script>';
   //echo "am ajuns aici";  
 echo "
 <script>
@@ -52,7 +51,7 @@ $Atime["min"]=$interval->format('%i');
 $Atime["month"]=$interval->format('%m');
 $Atime["year"]=$interval->format('%Y');
 
-if($Atime["month"]==0 and $Atime["year"]==0 and $Atime["day"]==0 and $Atime["hour"]==0 and ($Atime["min"]<=4)){
+if($Atime["month"]==0 and $Atime["year"]==0 and $Atime["day"]==0 and $Atime["hour"]==0 and ($Atime["min"]<=1)){
 
 $ff=array("link","description");
 $ff["link"]=$item_link2;
@@ -72,7 +71,8 @@ $ff["description"]=$item_desc2;
 
 ?>
 <?php
-function star(){
+session_start();
+
 
 $url = "http://localhost:2000/rares/apiRSS.php?id_user=".$_SESSION["id"];
 $client = curl_init($url);
@@ -81,6 +81,6 @@ $response = curl_exec($client);
 $result = json_decode($response);
 if(!empty($result))
 foreach ($result as $l)
-news_from_xml($l);}
+news_from_xml($l);
 
 ?>

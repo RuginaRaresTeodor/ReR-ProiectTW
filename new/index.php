@@ -1,7 +1,4 @@
-<?php 
-include ('popup.php');
-header("refresh: 60"); 
-?>
+
 
 <html>
 
@@ -427,7 +424,6 @@ else
 $id=$_SESSION["id"];
 $stid = oci_parse($conn, "SELECT feed_site FROM link_feed where user_id=$id");
 oci_execute($stid);
-//vezi ce domenii ai si la final parcurgi domeniu cu domeniu
 $pars=array();
 $parsL=array();
 
@@ -530,16 +526,41 @@ Welcome <?php echo $_SESSION["name"]; ?>. Click here to <a href="logout.php" tit
   </div>
   </div>
   </div>
-    
- 
+  
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+(function($)
+{
+    $(document).ready(function()
+    {
+        $.ajaxSetup(
+        {
+            cache: false,
+            beforeSend: function() {
+                $('#content').hide();
+                $('#loading').show();
+            },
+            complete: function() {
+                $('#loading').hide();
+                $('#content').show();
+            },
+            success: function() {
+                $('#loading').hide();
+                $('#content').show();
+            }
+        });
+        var $container = $("#content");
+        $container.load("popup.php");
+        var refreshId = setInterval(function()
+        {
+            $container.load('popup.php');
+        }, 60000);
+    });
+})(jQuery);
+</script>
+  <div id="content"></div>
 </body>
 
 </html>
 
 
-<?php 
-
-
-
-star();
-?>
