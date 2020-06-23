@@ -167,5 +167,11 @@ $ittem['type'][]=$item->enclosure['type'];
   </div>
 </div>
 ';?>
+
+<a href="http://localhost/new/index.php" class="buton">
+
+        <p>Back to Home</p>
+
+    </a>
 </body>
 </html>
