@@ -2,6 +2,9 @@
 
 <?php
 require_once "config.php";
+$IDarray=array();
+$Narray=array();
+
 echo '<div class="topleft">';
 echo "<table class='minimalistBlack'>";
 echo "<thead><tr><th>id</th><th>nume</th><th>mail</th><th>parola</th><th></th><th></th></tr></thead><tbody>";
@@ -21,6 +24,8 @@ $numm=trim($result->nume);
 $mmail=trim($result->adresa_mail);
 $pass=trim($result->parola);
 $id=trim($result->id_user);
+array_push($IDarray,$id);
+array_push($Narray,$numm);
 
 
 echo '<form action="modify.php" method="post">
@@ -45,10 +50,43 @@ echo '
    <td><input type="submit" class="btn btn-primary" value="+"></td>
    <td><a href=""></a></td>';
 
-echo "</tbody></table></br>";
+echo "</form></tbody></table></br>";
 echo "</div>";
 
 
 
+  foreach(
+  array_combine($IDarray, $Narray) as $i => $n){
+   echo '<div class="topleft">';
+   echo "<table class='minimalistBlack'>";
+   echo "<thead><tr><th>".$n."</th><th></th></tr></thead><tbody>";
   
+
+$url = "http://localhost:2000/rares/apiRSS.php?id_user=".$i;
+$client = curl_init($url);
+curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+$response = curl_exec($client);
+$result = json_decode($response);
+if(!empty($result))
+foreach ($result as $l)
+{        
+   $two=trim($l."¬".$i);
+
+   echo '
+   <td><input type="text" name="link" value="'.$l.'"></td> 
+         
+          
+          <td><a href="delete.php?CusID='.$two.'">Delete</a></td>
+</tr>';
+}
+echo ' 
+   <form action="addR.php" method="post">
+   <input type="hidden" name="id_user" value="'.$i.'">
+   <td><input type="text" name="link" value=""></td>  
+   <td><input type="submit" class="btn btn-primary" value="+"></td>';
+   
+echo "</form></tbody></table></br>";
+echo "</div>";
+
+  }
 ?>
