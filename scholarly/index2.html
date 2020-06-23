@@ -37,8 +37,9 @@
               <h3>Register</h3>
               <p>
                 Printr-o metoda POST, catre server se vor trimite trei parametri care vor fi transmisi catre baza de date .
-                Daca email-ul sau username-ul exista deja in baza de date utilizatorul va fi informat despre asta, parola se introduce de doua oru pentru asigurarea
+                Daca email-ul sau username-ul exista deja in baza de date utilizatorul va fi informat despre asta, parola se introduce de doua ori pentru asigurarea
                 textuli introdus.
+                Utilizatorul va fi anuntat in momentul in care ceva nu decurge corect prin semnalarea unui mesaj explicativ.
               </p>
             </section>
             <section id="Register-Login">
@@ -83,8 +84,23 @@
             <section id="disconnect">
               <h3>Disconnect</h3>
               <p>
-                Prin apasarea acestui buton, se va distruge sesiunea curent.
+                Prin apasarea acestui buton, se va distruge sesiunea curenta.
               </p>
+            </section>
+      <section id="personal rss">
+              <h3>ourRSS</h3>
+              <p>
+              Folosind XMLWriter(), sunt construite functii specifice in php pentru citirea si crearea unui nou rss. Prin apeluri ale bazei de date sunt extrase linkurile catre rss urile siteurilor
+                si cu un 'simplexml_load_file' ce citeste si sparge xml-ul in iteme, alegem cele mai recente stiri si le copiem in propriul rss.
+              </p>
+            </section>
+      
+       </section>
+      <section id="administator section">
+              <h3>admin</h3>
+              <p>
+                Prin diverse metode, POST, GET din form-uri si client prin curl_init, administratorul modifica datele userilor,feedurilor, le sterge sau poate adauga altele noi.
+                 </p>
             </section>
         </section>
       </section>
