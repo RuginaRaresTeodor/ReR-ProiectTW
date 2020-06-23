@@ -4,8 +4,8 @@
 <title>Wynton Magazine</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="css/pagina.css" type="text/css" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script type="text/javascript" src="js/dropdowns.js"></script>
 </head>
 <body id="home">
 <?php 
