@@ -1,13 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-EN">
-<head profile="http://gmpg.org/xfn/11">
-<title>Wynton Magazine</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="css/pagina.css" type="text/css" media="screen" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html >
+<head >
+<title>Recon</title>
+  <meta name="description" content="We recon for you!">
+  <meta name="author" content="Rares Rugina & Marius Roman">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="profile.png" />
+  <link rel="stylesheet" type="text/css" href="css/tabel.css">
+  <link rel="stylesheet" href="css/pagina.css" type="text/css" media="screen" />
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 </head>
+
 <body id="home">
+
+  
 <?php 
 function media($tip,$url,$w,$h,$i,$c)
 {
@@ -53,8 +62,9 @@ $ittem['type'][]=$item->enclosure['type'];
   echo ' <div id="homecontent-top">
     <div id="homecontent-topleft" class="left">
       <div id="leadcontainer" style="
-    padding-bottom: 95px;">
-        <!-- LEAD ARTICLE -->
+      padding-bottom: 95px;
+      width: 510px;
+      ">
         <div id="lead">
           <ul>
             <div id="leadheader">
@@ -85,10 +95,12 @@ $ittem['type'][]=$item->enclosure['type'];
       echo '</a> <a href="'.$ittem["link"][2].'" class="title"> '. $ittem["titlu"][2].' </a> </div>
        <div class="feature"> <a href="'.$ittem["link"][3].'">';media($ittem["type"][3],$ittem["img"][3],258,133,"","");
        echo '</a> <a href="'.$ittem["link"][3].'" class="title"> '. $ittem["titlu"][3].'</a> </div>
-       <div class="feature"> <a href="'.$ittem["link"][4].'">';media($ittem["type"][4],$ittem["img"][4],270,133,"","");
+       <div class="feature"> <a href="'.$ittem["link"][4].'">';media($ittem["type"][4],$ittem["img"][4],258,133,"","");
        echo '</a> <a href="'.$ittem["link"][4].'" class="title"> '. $ittem["titlu"][4].' </a> </div>
-       <div class="feature"> <a href="'.$ittem["link"][5].'">';media($ittem["type"][5],$ittem["img"][5],270,133,"","");
+       <div class="feature"> <a href="'.$ittem["link"][5].'">';media($ittem["type"][5],$ittem["img"][5],258,133,"","");
        echo '</a> <a href="'.$ittem["link"][5].'" class="title"> '. $ittem["titlu"][5].'</a> </div>
+       <div class="feature"> <a href="'.$ittem["link"][6].'">';media($ittem["type"][6],$ittem["img"][6],258,133,"","");
+       echo '</a> <a href="'.$ittem["link"][6].'" class="title"> '. $ittem["titlu"][6].'</a> </div>
 
        </div>
     </div>
@@ -104,61 +116,61 @@ $ittem['type'][]=$item->enclosure['type'];
     <div id="homeleftcol">
       <div class="clearfloat">
         <div class="cat-head">
-       <h3><a href="'.$ittem["link"][6].'"> '. $ittem["titlu"][6].' </a></h3>
+       <h3><a href="'.$ittem["link"][7].'"> '. $ittem["titlu"][7].' </a></h3>
         </div>
-        <a href="'.$ittem["link"][6].'">';media($ittem["type"][6],$ittem["img"][6],150,100,"","home-cat-img");
-        echo '</a> <a href="'.$ittem["link"][6].'" class="title"> About this </a><br />
-        '.$ittem["desc"][6].'</div>
+        <a href="'.$ittem["link"][7].'">';media($ittem["type"][7],$ittem["img"][7],150,100,"","home-cat-img");
+        echo '</a> <a href="'.$ittem["link"][7].'" class="title"> About this </a><br />
+        '.$ittem["desc"][7].'</div>
        
       <div class="clearfloat">
         <div class="cat-head">
        
-         <h3><a href="'.$ittem["link"][7].'"> '. $ittem["titlu"][7].' </a></h3>
+         <h3><a href="'.$ittem["link"][8].'"> '. $ittem["titlu"][8].' </a></h3>
         </div>
-        <a href="'.$ittem["link"][7].'">';media($ittem["type"][7],$ittem["img"][7],150,100,"","home-cat-img");
-        echo '</a> <a href="'.$ittem["link"][7].'" class="title"> About this </a><br />
-        '.$ittem["desc"][7].' </div>
+        <a href="'.$ittem["link"][8].'">';media($ittem["type"][8],$ittem["img"][8],150,100,"","home-cat-img");
+        echo '</a> <a href="'.$ittem["link"][8].'" class="title"> About this </a><br />
+        '.$ittem["desc"][8].' </div>
     </div>
     <!--END LEFTCOL-->
  
     <div id="homemidcol">
       <div class="clearfloat">
         <div class="cat-head">
-         <h3><a href="'.$ittem["link"][8].'"> '. $ittem["titlu"][8].' </a></h3>
+         <h3><a href="'.$ittem["link"][9].'"> '. $ittem["titlu"][9].' </a></h3>
         </div>
-        <a href="'.$ittem["link"][8].'">';media($ittem["type"][8],$ittem["img"][8],150,100,"","home-cat-img");
-        echo '</a> <a href="'.$ittem["link"][8].'" class="title"> About this </a><br />
-        '.$ittem["desc"][8].'</div>
+        <a href="'.$ittem["link"][9].'">';media($ittem["type"][9],$ittem["img"][9],150,100,"","home-cat-img");
+        echo '</a> <a href="'.$ittem["link"][9].'" class="title"> About this </a><br />
+        '.$ittem["desc"][9].'</div>
         
        
         <div class="clearfloat">
         <div class="cat-head">
-       <h3><a href="'.$ittem["link"][9].'"> '. $ittem["titlu"][9].' </a></h3>
+       <h3><a href="'.$ittem["link"][10].'"> '. $ittem["titlu"][10].' </a></h3>
         </div>
-        <a href="'.$ittem["link"][9].'">';media($ittem["type"][9],$ittem["img"][9],150,100,"","home-cat-img");
-        echo '</a> <a href="'.$ittem["link"][9].'" class="title"> About this </a><br />
-        '.$ittem["desc"][9].' </div>
+        <a href="'.$ittem["link"][10].'">';media($ittem["type"][10],$ittem["img"][10],150,100,"","home-cat-img");
+        echo '</a> <a href="'.$ittem["link"][10].'" class="title"> About this </a><br />
+        '.$ittem["desc"][10].' </div>
     </div>
     <!--END MIDCOL-->
   
     <div id="homerightcol">
       <div class="clearfloat">
         <div class="cat-head">
-        <h3><a href="'.$ittem["link"][10].'"> '. $ittem["titlu"][10].' </a></h3>
-        </div>
-        <a href="'.$ittem["link"][10].'">';media($ittem["type"][10],$ittem["img"][10],150,100,"","home-cat-img");
-        echo '</a> <a href="'.$ittem["link"][10].'" class="title"> About this </a><br />
-        '.$ittem["desc"][10].'</div>
-        
-       
-       
-        <div class="clearfloat">
-        <div class="cat-head">
         <h3><a href="'.$ittem["link"][11].'"> '. $ittem["titlu"][11].' </a></h3>
         </div>
         <a href="'.$ittem["link"][11].'">';media($ittem["type"][11],$ittem["img"][11],150,100,"","home-cat-img");
         echo '</a> <a href="'.$ittem["link"][11].'" class="title"> About this </a><br />
         '.$ittem["desc"][11].'</div>
+        
+       
+       
+        <div class="clearfloat">
+        <div class="cat-head">
+        <h3><a href="'.$ittem["link"][12].'"> '. $ittem["titlu"][12].' </a></h3>
+        </div>
+        <a href="'.$ittem["link"][12].'">';media($ittem["type"][12],$ittem["img"][12],150,100,"","home-cat-img");
+        echo '</a> <a href="'.$ittem["link"][12].'" class="title"> About this </a><br />
+        '.$ittem["desc"][12].'</div>
     </div>
     <!--END RIGHTCOL-->
     <!--END CONTENT-->
@@ -168,7 +180,8 @@ $ittem['type'][]=$item->enclosure['type'];
 </div>
 ';?>
 
-<a href="http://localhost/new/index.php" class="buton">
+
+<a href="index.php" class="buton">
 
         <p>Back to Home</p>
 
