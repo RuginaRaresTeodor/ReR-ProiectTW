@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Recon Plugin ReR",
+  "description": "This extension will give you RSS",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "profile.png",
+   "default_title": "Your feed",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://localhost/new/index.php",
+    "tabs"
+  ]
+}
