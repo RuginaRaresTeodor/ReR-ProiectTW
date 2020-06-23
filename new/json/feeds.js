@@ -41,7 +41,7 @@ for (var i = 0; i < result.feed.entries.length; i++) {
             var cell3 = row.insertCell(2);
             
             cell1.innerHTML = student.name,
-            cell2.innerHTML = '<a href="'+entry.link+'">'+entry.title+'</a>',
+            cell2.innerHTML = '<a target="_blank" href="'+entry.link+'">'+entry.title+'</a>',
             //cell3.innerHTML = student.rank;
             container.appendChild(table); 
             container.appendChild(b);
