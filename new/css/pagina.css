@@ -5,13 +5,16 @@
 	}
 
 body,html {
-	min-height:101%;
+	min-height:40%;
+	background-color: #011627;
+	color: #011627;
 	}
 	
 body {
 	background:/*url(images/backgrounds/bg_leadcontainer.jpg) repeat-x 0px 0px #252525*/ #eee;
 	color: #333;
 	padding: 13px 0 25px 0;
+	background-color: #011627;
 	}
 
 body, select, input, textarea {
@@ -100,7 +103,7 @@ img.right{ float:right; margin:0 0 5px 12px; }
 	width:940px;
 	margin:0 auto;
 	font-size:1em;
-	background:#FFF;
+	background-color: #011627;
 	padding: 10px 20px 40px 20px;
 	border-top:4px solid #999;
 	border-bottom:4px solid #999;
@@ -115,10 +118,12 @@ img.right{ float:right; margin:0 0 5px 12px; }
 
 .left {
 	float:left;
+	width:50%;
 	}
 
 .right {
 	float:right;
+	width:50%;
 	}
 
 #sidebar {
@@ -132,13 +137,14 @@ img.right{ float:right; margin:0 0 5px 12px; }
 	width:30%;
 	border-right:1px solid #ccc;
 	padding-right:20px;
+	padding-left:2%;
 	text-align:justify;
 	float:left;
 	}
 	
 #homemidcol {
 	width:30%;
-	padding:0 20px 0 20px;
+	padding:0 0px 0 20px;
 	text-align:justify;
 	float:left;
 	}
@@ -148,7 +154,7 @@ img.right{ float:right; margin:0 0 5px 12px; }
 	border-left:1px solid #ccc;
 	padding-left:20px;
 	text-align:justify;
-	float:right;
+	float:left;
 	}
 		
 
@@ -299,21 +305,23 @@ h4 {
 	}
 
 #homecontent-top {
-	width:940px;
+
 	margin-top:25px;
 	}
 	
 #homecontent-bottom {
-	width:900px;
+	width:100%;
 	margin-top:20px;
 	}
 
 #homecontent-topleft {
-	width: 600px;
+	width: 40%;
 	}
 
 #homecontent-topright {
-	width: 300px;
+	width: 50%;
+	column-count:2;
+	padding-right:10px;
 	}
 	
 
@@ -326,7 +334,9 @@ h4 {
 	border-bottom:4px solid #C29704;
 	padding:15px;
 	width:592px;
+	padding-left:10%;
 	min-height:350px;
+	float:right;
 	}
 	
 
