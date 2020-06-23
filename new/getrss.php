@@ -42,16 +42,16 @@ $video_type=$item->enclosure['type'] ;//video
 
 if($video_url!=''){
   if($video_type!="image/jpeg"){
-echo '<video controls>
+echo '<video controls> 
   <source src="'.$video_url.'" type="'.$video_type.'">
 </video>';}
-else{
+else{///video
 
   echo "<p>
  <a href='".$item_link."'>
 <img alt='".$item_title."'
  src='".$video_url."'
-   ></a></p>";
+   ></a></p>";//image 1/2
 }
 
 
@@ -84,7 +84,7 @@ echo ("<br>");
   echo ("<p>[".$item_pubdate."]<a href='" . $item_link
   . "'>" . $item_title . "</a>");
   echo ("<br>");
-  echo ($item_desc . "</p>");
+  echo ($item_desc . "</p>"); 
 }
 
 

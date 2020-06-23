@@ -461,10 +461,10 @@ while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
         $user= (explode("#",$item));
         $bd_titlu=$user[0];
         $bd_link=trim($user[1]);
-        $two=trim($bd_link."k".$id);
+        $two=trim($bd_link."¬".$id);
         #echo ($item !== null ? $bd_titlu." ".$bd_link."#": "&nbsp;");
         if(in_array($bd_link,$parsL)){
-        echo '<tr><td><a href="getrss.php?l='.$bd_link.'">'.$bd_titlu.'</a></td>
+        echo '<tr><td><a href="pagina.php?l='.$bd_link.'">'.$bd_titlu.'</a></td>
         <td align="center"><a href="delete.php?CusID='.$two.'">Delete</a></td>  </tr>';
         }
     }

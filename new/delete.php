@@ -6,7 +6,7 @@
 <?php
 include 'config.php';
 //$strSQL = "DELETE FROM link_feed ";  
-$mes=explode("k",$_GET["CusID"]);
+$mes=explode("¬",$_GET["CusID"]);
 
 $strSQL = "DELETE FROM link_feed ";  
 $strSQL .="WHERE user_id = '".$mes[1]."' and feed_site='".$mes[0]."'";  
