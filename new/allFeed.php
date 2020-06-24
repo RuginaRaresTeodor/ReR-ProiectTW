@@ -67,7 +67,6 @@ $ittem['type'][]=$item->enclosure['type'];
     <div id="homecontent-topleft" class="left">
       <div id="leadcontainer" style="
       padding-bottom: 95px;
-      width: 510px;
       ">
           <ul>
             <div id="leadheader">
